@@ -1,0 +1,255 @@
+INVEST.AI — Master Project Vision & Development Prompt
+
+1. Project Vision
+
+Build INVEST.AI, a premium AI-powered investment research and portfolio management dashboard.
+
+The goal is to create a modern investment platform that combines financial market data, artificial intelligence, portfolio monitoring and controlled paper trading in one place.
+
+INVEST.AI should act as an intelligent investment assistant: it researches markets, analyzes stocks and ETFs, identifies potential opportunities, explains investment risks and helps the user make informed investment decisions.
+
+The platform should be professional, reliable, intuitive and visually comparable to premium financial technology products.
+
+Important: INVEST.AI is initially a personal investment research and paper-trading platform, not an autonomous trading bot.
+
+2. Core Features
+
+A. Investment Dashboard
+
+Create a central dashboard displaying:
+
+* Total portfolio value
+* Available cash
+* Starting capital
+* Daily and overall performance
+* Unrealized and realized profit/loss
+* Portfolio allocation
+* Open positions
+* Watchlist
+* Market overview
+
+The dashboard should update dynamically using connected market data.
+
+B. AI Investment Research
+
+Integrate an AI research assistant capable of:
+
+* Analyzing individual stocks and ETFs
+* Explaining company fundamentals
+* Evaluating financial performance
+* Identifying potential risks
+* Summarizing relevant market news
+* Comparing companies and investment opportunities
+* Explaining bullish and bearish scenarios
+* Producing structured investment research reports
+
+Every analysis should distinguish verified facts from assumptions and AI-generated interpretations.
+
+C. Market Monitoring
+
+Create a market overview with:
+
+* Stock prices
+* Price movements
+* Percentage changes
+* Market trends
+* Watchlists
+* Relevant financial news
+
+Initial watchlist:
+
+* NVIDIA (NVDA)
+* Microsoft (MSFT)
+* ASML (ASML)
+* Vanguard FTSE All-World ETF (VWCE)
+
+The system should be expandable to additional stocks, ETFs and markets.
+
+D. Portfolio Management
+
+Allow the user to:
+
+* Monitor portfolio value
+* Track individual positions
+* View profit and loss
+* Review historical performance
+* Analyze asset allocation
+* Monitor available buying power
+
+The portfolio should clearly distinguish actual holdings from hypothetical AI recommendations.
+
+3. Alpaca Paper Trading Integration
+
+Integrate Alpaca Paper Trading as the initial brokerage connection.
+
+Requirements:
+
+* Use Paper Trading exclusively.
+* Never connect to a live trading account.
+* Use server-side API credentials stored as secure environment variables.
+* Never expose API keys or secrets to the browser.
+* Retrieve account information and positions.
+* Display account balance, equity, cash and buying power.
+
+The initial integration should remain read-only.
+
+Future order functionality
+
+Order functionality may be developed later, but only with strict safeguards:
+
+* Starting capital: €50.
+* Maximum proposed order: €10.
+* Every order must require explicit manual user approval.
+* AI may propose orders but must never execute them autonomously.
+* Clearly display symbol, side, quantity, estimated value and risk before approval.
+* Enforce Paper Trading at the server level.
+* Never enable live trading.
+
+No order should be submitted without a separate, explicit confirmation from the user.
+
+4. Risk Management
+
+Create a dedicated risk-management section.
+
+Display:
+
+* Available capital
+* Maximum permitted order size
+* Portfolio exposure
+* Position concentration
+* Potential downside
+* Relevant risk warnings
+
+Initial configuration:
+
+* Starting capital: €50
+* Maximum proposed order: €10
+* Trading mode: Paper Trading
+* Live trading: Disabled
+* Manual approval: Required
+
+All risk limits must be enforced server-side, not merely displayed in the interface.
+
+5. Technology
+
+Current project:
+
+* Next.js 16
+* React 19
+* TypeScript
+* Tailwind CSS
+* Vercel deployment
+* GitHub repository
+
+GitHub repository:
+pietroconforti-blip/invest-AI
+
+Development branch:
+preview-config
+
+All new development should remain on this branch unless explicitly authorized otherwise.
+
+Do not modify or promote the Production deployment without explicit permission.
+
+6. Design & User Experience
+
+The visual identity should be premium, minimalistic and professional.
+
+Design direction:
+
+* Dark navy blue
+* Gold accents
+* White and subtle grey surfaces
+* Elegant typography
+* Clean financial charts
+* Modern cards and data visualizations
+* Professional editorial aesthetic
+
+The interface should feel like a combination of a private investment terminal and a premium fintech application.
+
+Avoid:
+
+* Excessive animations
+* Cluttered layouts
+* Unnecessary gradients
+* Generic dashboard templates
+* Overloaded information panels
+
+Prioritize clarity, precision and usability.
+
+7. Security & Reliability
+
+Security is a priority.
+
+Requirements:
+
+* Keep brokerage credentials server-side.
+* Validate all external API responses.
+* Handle API failures gracefully.
+* Never expose private account credentials.
+* Prevent accidental live trading.
+* Enforce risk limits on the server.
+* Clearly communicate when market data is delayed or unavailable.
+* Never fabricate financial data or account information.
+
+8. Development Roadmap
+
+Phase 1 — Foundation
+
+* Build the main dashboard.
+* Add market overview and watchlist.
+* Implement initial portfolio metrics.
+* Establish the premium visual identity.
+
+Phase 2 — AI Research
+
+* Integrate AI-powered stock and ETF analysis.
+* Add structured research reports.
+* Add market news summaries.
+* Introduce bullish and bearish scenarios.
+
+Phase 3 — Alpaca Integration
+
+* Connect Alpaca Paper Trading.
+* Retrieve account information and positions.
+* Display real paper-account metrics.
+* Verify the integration without submitting orders.
+
+Phase 4 — Risk Management
+
+* Implement portfolio risk metrics.
+* Enforce the €10 maximum proposed order.
+* Add manual approval workflows.
+* Keep live trading disabled.
+
+Phase 5 — Advanced Platform
+
+* Historical performance analytics.
+* More advanced portfolio visualizations.
+* Investment opportunity monitoring.
+* Improved research and reporting.
+* Optional alerts and notifications.
+
+9. Working Instructions for the AI Developer
+
+Act as a senior full-stack developer, fintech product designer and AI systems architect.
+
+Before changing code:
+
+1. Inspect the existing project.
+2. Understand the current architecture.
+3. Identify existing functionality.
+4. Avoid rebuilding features that already work.
+5. Make incremental, testable changes.
+
+After each implementation:
+
+* Run relevant tests.
+* Check TypeScript and build errors.
+* Verify API routes.
+* Check the Preview deployment.
+* Report exactly what was completed and what remains.
+
+Never claim that a feature works without testing it.
+
+The ultimate objective: Build INVEST.AI into a reliable, intelligent and premium personal investment platform that combines AI-powered financial research, real-time portfolio monitoring and strictly controlled paper trading.
